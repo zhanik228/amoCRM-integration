@@ -21,6 +21,7 @@ const getContacts = async () => {
         code,
         redirect_uri,
       },
+      url: `${baseURL}oauth2/access_token`,
     });
     const data = res.json();
     console.log(data);
