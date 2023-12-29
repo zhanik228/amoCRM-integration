@@ -10,7 +10,7 @@ const code =
 
 const getContacts = async () => {
   try {
-    const res = await fetch({
+    const res = await fetch(`${baseURL}oauth2/access_token`, {
       method: "POST",
       body: {
         client_id,
@@ -19,7 +19,6 @@ const getContacts = async () => {
         code,
         redirect_uri,
       },
-      url: `${baseURL}oauth2/access_token`,
     });
     const data = res.json();
     console.log(data);
