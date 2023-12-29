@@ -1,5 +1,3 @@
-import AmoCRM from "amocrm-js";
-
 const baseURL = "https://zhan142004.amocrm.ru/";
 const getContactListQuery = `api/v4/contacts`;
 
