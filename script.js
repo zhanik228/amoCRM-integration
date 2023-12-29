@@ -17,10 +17,10 @@ const getContacts = async () => {
         client_secret,
         grant_type: "authorization_code",
         code,
-        redirect_uri,
+        redirect_uri: "https://zhanik228.github.io/amoCRM-integration/",
       },
     });
-    const data = res;
+    const data = res.json();
     console.log(data);
   } catch (error) {
     console.error(error);
