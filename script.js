@@ -10,17 +10,14 @@ const code =
 
 const getContacts = async () => {
   try {
-    const res = await fetch(`${baseURL}oauth2/access_token`, {
-      method: "POST",
-      body: {
-        client_id,
-        client_secret,
-        grant_type: "authorization_code",
-        code,
-        redirect_uri: "https://zhanik228.github.io/amoCRM-integration/",
+    const res = await fetch(`${baseURL}contacts`, {
+      headers: {
+        Authorization: `Bearer ${client_secret}`,
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
       },
     });
-    const data = res.json();
+    const data = await res.json();
     console.log(data);
   } catch (error) {
     console.error(error);
