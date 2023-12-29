@@ -1,6 +1,0 @@
-{
-  "type":"module",
-  "dependencies": {
-    "amocrm-js": "^3.4.2"
-  }
-}
