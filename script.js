@@ -20,7 +20,7 @@ const getContacts = async () => {
         redirect_uri,
       },
     });
-    const data = res.json();
+    const data = res;
     console.log(data);
   } catch (error) {
     console.error(error);
